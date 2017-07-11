@@ -1,0 +1,409 @@
+ [property] Loading /home/alligator/Desktop/ElementBookRepository/build.properties
+Build sequence for target(s) `deploy' is [check-environment, init, compile, jar, war, ear, deploy]
+Complete build sequence is [check-environment, init, compile, jar, war, ear, deploy, check-tomee, clean, prepare-database, ]
+
+check-environment:
+Project base dir set to: /home/alligator/Desktop/ElementBookRepository
+  [antcall] calling target(s) [check-tomee] in build file /home/alligator/Desktop/ElementBookRepository/build.xml
+parsing buildfile /home/alligator/Desktop/ElementBookRepository/build.xml with URI = file:/home/alligator/Desktop/ElementBookRepository/build.xml
+Project base dir set to: /home/alligator/Desktop/ElementBookRepository
+ [property] Loading /home/alligator/Desktop/ElementBookRepository/build.properties
+Override ignored for property "jarname"
+Override ignored for property "tomee.dir"
+Override ignored for property "earname"
+Override ignored for property "warname"
+Override ignored for property "build"
+Override ignored for property "dist"
+Override ignored for property "docs"
+Override ignored for property "lib"
+Override ignored for property "src"
+Override ignored for property "web"
+Build sequence for target(s) `check-tomee' is [check-tomee]
+Complete build sequence is [check-tomee, check-environment, init, compile, war, jar, ear, deploy, clean, prepare-database, ]
+  [antcall] Entering /home/alligator/Desktop/ElementBookRepository/build.xml...
+Build sequence for target(s) `check-tomee' is [check-tomee]
+Complete build sequence is [check-tomee, check-environment, init, compile, war, jar, ear, deploy, clean, prepare-database, ]
+
+check-tomee:
+Skipped because property 'tomee.dir' set.
+check-tomee:  duration 0 seconds
+  [antcall] Exiting /home/alligator/Desktop/ElementBookRepository/build.xml.
+check-environment:  duration 0 seconds
+
+init:
+    [mkdir] Created dir: /home/alligator/Desktop/ElementBookRepository/build
+    [mkdir] Created dir: /home/alligator/Desktop/ElementBookRepository/dist
+     [echo] java.home = /usr/lib/jvm/java-8-openjdk-amd64/jre
+     [echo] tomee.dir = /home/alligator/Desktop/apache-tomee-plus-1.7.3
+init:  duration 0 seconds
+
+compile:
+    [javac] /home/alligator/Desktop/ElementBookRepository/build.xml:52: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /home/alligator/Desktop/ElementBookRepository/src/META-INF/application.xml skipped - don't know how to handle it
+    [javac] /home/alligator/Desktop/ElementBookRepository/src/META-INF/persistence.xml skipped - don't know how to handle it
+    [javac] /home/alligator/Desktop/ElementBookRepository/src/app.properties skipped - don't know how to handle it
+    [javac] /home/alligator/Desktop/ElementBookRepository/src/jndi.properties skipped - don't know how to handle it
+    [javac] /home/alligator/Desktop/ElementBookRepository/src/log4j.properties skipped - don't know how to handle it
+    [javac] /home/alligator/Desktop/ElementBookRepository/src/messages/messages_en.properties skipped - don't know how to handle it
+    [javac] /home/alligator/Desktop/ElementBookRepository/src/messages/messages_sr.properties skipped - don't know how to handle it
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/client/InitClient.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/client/InitClient.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/Indexer.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/Indexer.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/QueryBuilder.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/QueryBuilder.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/ResultRetriever.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/ResultRetriever.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/SerbianAnalyzer.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/SerbianAnalyzer.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/filters/CyrilicToLatinFilter.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/filters/CyrilicToLatinFilter.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/filters/CyrillicLatinConverter.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/filters/CyrillicLatinConverter.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/handlers/DocumentHandler.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/handlers/DocumentHandler.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/handlers/PDFHandler.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/handlers/PDFHandler.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/model/RequiredHighlight.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/model/RequiredHighlight.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/model/SearchType.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/model/SearchType.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/AccountController.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/AccountController.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/DownloadController.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/DownloadController.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/EbookController.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/EbookController.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/GenreChangeController.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/GenreChangeController.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/GenreController.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/GenreController.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/InitApp.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/InitApp.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/LangChangeController.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/LangChangeController.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/LanguageController.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/LanguageController.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/LoginController.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/LoginController.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/LogoutController.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/LogoutController.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/MessageConstants.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/MessageConstants.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/SearchController.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/SearchController.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/UploadController.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/UploadController.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/UserController.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/UserController.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/entity/Category.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/entity/Category.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/entity/Ebook.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/entity/Ebook.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/entity/File.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/entity/File.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/entity/Language.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/entity/Language.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/entity/User.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/entity/User.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/entity/UserRole.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/entity/UserRole.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/CategoryDaoBean.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/CategoryDaoBean.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/CategoryDaoLocal.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/CategoryDaoLocal.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/EbookDaoBean.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/EbookDaoBean.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/EbookDaoLocal.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/EbookDaoLocal.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/GenericDaoBean.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/GenericDaoBean.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/GenericDaoLocal.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/GenericDaoLocal.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/Init.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/Init.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/InitBean.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/InitBean.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/LanguageDaoBean.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/LanguageDaoBean.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/LanguageDaoLocal.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/LanguageDaoLocal.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/UserDaoBean.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/UserDaoBean.class doesn't exist.
+    [javac] rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/UserDaoLocal.java added as rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/UserDaoLocal.class doesn't exist.
+    [javac] Compiling 43 source files to /home/alligator/Desktop/ElementBookRepository/build
+    [javac] Using modern compiler
+    [javac] Compilation arguments:
+'-d'
+'/home/alligator/Desktop/ElementBookRepository/build'
+'-classpath'
+'/home/alligator/Desktop/ElementBookRepository/build:/home/alligator/Desktop/ElementBookRepository/lib/commons-collections-3.2.1.jar:/home/alligator/Desktop/ElementBookRepository/lib/commons-fileupload-1.2.1.jar:/home/alligator/Desktop/ElementBookRepository/lib/commons-io-1.3.2.jar:/home/alligator/Desktop/ElementBookRepository/lib/commons-lang-2.6.jar:/home/alligator/Desktop/ElementBookRepository/lib/commons-logging-1.1.1.jar:/home/alligator/Desktop/ElementBookRepository/lib/dom4j-1.6.1.jar:/home/alligator/Desktop/ElementBookRepository/lib/fontbox-1.8.3.jar:/home/alligator/Desktop/ElementBookRepository/lib/geronimo-stax-api_1.0_spec-1.0.jar:/home/alligator/Desktop/ElementBookRepository/lib/jackson-annotations-2.6.0.jar:/home/alligator/Desktop/ElementBookRepository/lib/jackson-core-2.6.4.jar:/home/alligator/Desktop/ElementBookRepository/lib/jackson-databind-2.6.4.jar:/home/alligator/Desktop/ElementBookRepository/lib/javaee-api-6.0-4-tomcat.jar:/home/alligator/Desktop/ElementBookRepository/lib/jempbox-1.8.3.jar:/home/alligator/Desktop/ElementBookRepository/lib/jstl-1.2.jar:/home/alligator/Desktop/ElementBookRepository/lib/log4j-1.2.8.jar:/home/alligator/Desktop/ElementBookRepository/lib/lucene-analyzers-common-4.0.0.jar:/home/alligator/Desktop/ElementBookRepository/lib/lucene-core-4.0.0.jar:/home/alligator/Desktop/ElementBookRepository/lib/lucene-highlighter-4.0.0.jar:/home/alligator/Desktop/ElementBookRepository/lib/lucene-queryparser-4.0.0.jar:/home/alligator/Desktop/ElementBookRepository/lib/mysql-connector-java-5.1.22-bin.jar:/home/alligator/Desktop/ElementBookRepository/lib/openejb-client-4.5.0.jar:/home/alligator/Desktop/ElementBookRepository/lib/openjpa-asm-shaded-2.2.0.jar:/home/alligator/Desktop/ElementBookRepository/lib/pdfbox-1.8.3.jar:/home/alligator/Desktop/ElementBookRepository/lib/pdfbox-lucene-1.7.1.jar:/home/alligator/Desktop/ElementBookRepository/lib/poi-3.7-20101029.jar:/home/alligator/Desktop/ElementBookRepository/lib/poi-ooxml-3.7-20101029.jar:/home/alligator/Desktop/ElementBookRepository/lib/poi-scratchpad-3.7-20101029.jar:/home/alligator/Desktop/ElementBookRepository/lib/serp-1.13.1.jar:/home/alligator/Desktop/ElementBookRepository/lib/servlet-api.jar:/home/alligator/Desktop/ElementBookRepository/lib/standard.jar:/home/alligator/Desktop/ElementBookRepository/lib/xbean-asm-shaded-3.11.jar:/home/alligator/Desktop/ElementBookRepository/lib/xmlbeans-2.3.0.jar:/opt/idea-IU-163.12024.16/lib/ant/lib/ant-apache-resolver.jar:/opt/idea-IU-163.12024.16/lib/ant/lib/ant-jai.jar:/opt/idea-IU-163.12024.16/lib/ant/lib/ant-apache-xalan2.jar:/opt/idea-IU-163.12024.16/lib/ant/lib/ant-junit4.jar:/opt/idea-IU-163.12024.16/lib/ant/lib/ant-netrexx.jar:/opt/idea-IU-163.12024.16/lib/ant/lib/ant-launcher.jar:/opt/idea-IU-163.12024.16/lib/ant/lib/ant-antlr.jar:/opt/idea-IU-163.12024.16/lib/ant/lib/ant-apache-oro.jar:/opt/idea-IU-163.12024.16/lib/ant/lib/ant-testutil.jar:/opt/idea-IU-163.12024.16/lib/ant/lib/ant-apache-log4j.jar:/opt/idea-IU-163.12024.16/lib/ant/lib/ant-jdepend.jar:/opt/idea-IU-163.12024.16/lib/ant/lib/ant-jsch.jar:/opt/idea-IU-163.12024.16/lib/ant/lib/ant-junit.jar:/opt/idea-IU-163.12024.16/lib/ant/lib/ant-javamail.jar:/opt/idea-IU-163.12024.16/lib/ant/lib/ant-jmf.jar:/opt/idea-IU-163.12024.16/lib/ant/lib/ant-commons-net.jar:/opt/idea-IU-163.12024.16/lib/ant/lib/ant-apache-regexp.jar:/opt/idea-IU-163.12024.16/lib/ant/lib/ant-commons-logging.jar:/opt/idea-IU-163.12024.16/lib/ant/lib/ant-apache-bcel.jar:/opt/idea-IU-163.12024.16/lib/ant/lib/ant-apache-bsf.jar:/opt/idea-IU-163.12024.16/lib/ant/lib/ant.jar:/opt/idea-IU-163.12024.16/lib/ant/lib/ant-swing.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/lib/tools.jar:/opt/idea-IU-163.12024.16/lib/idea_rt.jar'
+'-sourcepath'
+'/home/alligator/Desktop/ElementBookRepository/src'
+'-g'
+
+The ' characters around the executable and arguments are
+not part of the command.
+    [javac] Files to be compiled:
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/client/InitClient.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/Indexer.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/QueryBuilder.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/ResultRetriever.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/SerbianAnalyzer.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/filters/CyrilicToLatinFilter.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/filters/CyrillicLatinConverter.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/handlers/DocumentHandler.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/handlers/PDFHandler.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/model/RequiredHighlight.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/model/SearchType.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/AccountController.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/DownloadController.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/EbookController.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/GenreChangeController.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/GenreController.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/InitApp.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/LangChangeController.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/LanguageController.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/LoginController.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/LogoutController.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/MessageConstants.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/SearchController.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/UploadController.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/UserController.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/entity/Category.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/entity/Ebook.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/entity/File.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/entity/Language.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/entity/User.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/entity/UserRole.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/CategoryDaoBean.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/CategoryDaoLocal.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/EbookDaoBean.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/EbookDaoLocal.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/GenericDaoBean.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/GenericDaoLocal.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/Init.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/InitBean.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/LanguageDaoBean.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/LanguageDaoLocal.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/UserDaoBean.java
+    /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/UserDaoLocal.java
+    [javac] /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/Indexer.java:15: warning: Log is internal proprietary API and may be removed in a future release
+    [javac] import sun.rmi.runtime.Log;
+    [javac]                       ^
+    [javac] warning: Supported source version 'RELEASE_6' from annotation processor 'org.apache.openjpa.persistence.meta.AnnotationProcessor6' less than -source '1.8'
+    [javac] /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/Indexer.java:15: warning: Log is internal proprietary API and may be removed in a future release
+    [javac] import sun.rmi.runtime.Log;
+    [javac]                       ^
+    [javac] /home/alligator/Desktop/ElementBookRepository/src/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/Indexer.java:15: warning: Log is internal proprietary API and may be removed in a future release
+    [javac] import sun.rmi.runtime.Log;
+    [javac]                       ^
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 4 warnings
+     [copy] app.properties added as app.properties doesn't exist.
+     [copy] jndi.properties added as jndi.properties doesn't exist.
+     [copy] log4j.properties added as log4j.properties doesn't exist.
+     [copy] messages/messages_en.properties added as messages/messages_en.properties doesn't exist.
+     [copy] messages/messages_sr.properties added as messages/messages_sr.properties doesn't exist.
+     [copy] META-INF/application.xml added as META-INF/application.xml doesn't exist.
+     [copy] META-INF/persistence.xml added as META-INF/persistence.xml doesn't exist.
+     [copy] No sources found.
+     [copy] Copying 7 files to /home/alligator/Desktop/ElementBookRepository/build
+     [copy] Copying /home/alligator/Desktop/ElementBookRepository/src/app.properties to /home/alligator/Desktop/ElementBookRepository/build/app.properties
+     [copy] Copying /home/alligator/Desktop/ElementBookRepository/src/jndi.properties to /home/alligator/Desktop/ElementBookRepository/build/jndi.properties
+     [copy] Copying /home/alligator/Desktop/ElementBookRepository/src/log4j.properties to /home/alligator/Desktop/ElementBookRepository/build/log4j.properties
+     [copy] Copying /home/alligator/Desktop/ElementBookRepository/src/messages/messages_en.properties to /home/alligator/Desktop/ElementBookRepository/build/messages/messages_en.properties
+     [copy] Copying /home/alligator/Desktop/ElementBookRepository/src/messages/messages_sr.properties to /home/alligator/Desktop/ElementBookRepository/build/messages/messages_sr.properties
+     [copy] Copying /home/alligator/Desktop/ElementBookRepository/src/META-INF/application.xml to /home/alligator/Desktop/ElementBookRepository/build/META-INF/application.xml
+     [copy] Copying /home/alligator/Desktop/ElementBookRepository/src/META-INF/persistence.xml to /home/alligator/Desktop/ElementBookRepository/build/META-INF/persistence.xml
+compile:  duration 1 second
+
+jar:
+    [mkdir] Skipping /home/alligator/Desktop/ElementBookRepository/dist because it already exists.
+      [jar] Building jar: /home/alligator/Desktop/ElementBookRepository/dist/ElementBookRepository.jar
+      [jar] adding directory META-INF/
+      [jar] adding entry META-INF/MANIFEST.MF
+      [jar] adding entry META-INF/persistence.xml
+      [jar] adding directory rs/
+      [jar] adding directory rs/ac/
+      [jar] adding directory rs/ac/uns/
+      [jar] adding directory rs/ac/uns/ftn/
+      [jar] adding directory rs/ac/uns/ftn/informatika/
+      [jar] adding directory rs/ac/uns/ftn/informatika/osa/
+      [jar] adding directory rs/ac/uns/ftn/informatika/osa/ElementBookRepository/
+      [jar] adding directory rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/
+      [jar] adding directory rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/entity/
+      [jar] adding entry rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/entity/Category.class
+      [jar] adding entry rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/entity/Ebook.class
+      [jar] adding entry rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/entity/File.class
+      [jar] adding entry rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/entity/Language.class
+      [jar] adding entry rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/entity/User.class
+      [jar] adding entry rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/entity/UserRole.class
+      [jar] adding directory rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/
+      [jar] adding entry rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/CategoryDaoBean.class
+      [jar] adding entry rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/CategoryDaoLocal.class
+      [jar] adding entry rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/EbookDaoBean.class
+      [jar] adding entry rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/EbookDaoLocal.class
+      [jar] adding entry rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/GenericDaoBean.class
+      [jar] adding entry rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/GenericDaoLocal.class
+      [jar] adding entry rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/Init.class
+      [jar] adding entry rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/InitBean.class
+      [jar] adding entry rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/LanguageDaoBean.class
+      [jar] adding entry rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/LanguageDaoLocal.class
+      [jar] adding entry rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/UserDaoBean.class
+      [jar] adding entry rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/UserDaoLocal.class
+      [jar] No Implementation-Title set.No Implementation-Version set.No Implementation-Vendor set.
+Location: /home/alligator/Desktop/ElementBookRepository/build.xml:95: 
+jar:  duration 0 seconds
+
+war:
+      [war] Building war: /home/alligator/Desktop/ElementBookRepository/dist/ElementBookRepository.war
+      [war] adding directory META-INF/
+      [war] adding entry META-INF/MANIFEST.MF
+      [war] adding directory WEB-INF/
+      [war] adding entry WEB-INF/web.xml
+      [war] adding directory images/
+      [war] adding directory images/flags/
+      [war] adding directory images/social/
+      [war] adding entry 404.jsp
+      [war] adding entry add-edit-ebook.html
+      [war] adding entry add-edit-genre.html
+      [war] adding entry add-edit-user.html
+      [war] adding entry create.jsp
+      [war] adding directory css/
+      [war] adding entry css/login.css
+      [war] adding entry css/my-acc.css
+      [war] adding entry css/result.css
+      [war] adding entry css/style.css
+      [war] adding entry css/theme.css
+      [war] adding entry error-page.html
+      [war] adding entry error.jsp
+      [war] adding entry footer.html
+      [war] adding entry header.html
+      [war] adding entry images/background.jpg
+      [war] adding entry images/backgroundmain.jpg
+      [war] adding entry images/bg-glavnimeni.png
+      [war] adding entry images/flags/serbia.png
+      [war] adding entry images/flags/usa.png
+      [war] adding entry images/logo.png
+      [war] adding entry images/logo2.png
+      [war] adding entry images/myAcc.png
+      [war] adding entry images/social/facebook.png
+      [war] adding entry images/social/googleplus.png
+      [war] adding entry images/social/mail.png
+      [war] adding entry images/social/twitter.png
+      [war] adding entry index.jsp
+      [war] adding directory js/
+      [war] adding entry js/ajax-calls.js
+      [war] adding entry js/interface.js
+      [war] adding entry js/jquery-2.1.4.js
+      [war] adding entry js/login-acc.js
+      [war] adding entry login.jsp
+      [war] adding entry my-acc.jsp
+      [war] adding entry nav.jsp
+      [war] adding entry read.jsp
+      [war] adding entry result.jsp
+      [war] adding entry table-ebook.jsp
+      [war] adding entry table-genres.html
+      [war] adding entry table-users.html
+      [war] adding directory WEB-INF/classes/
+      [war] adding entry WEB-INF/classes/app.properties
+      [war] adding entry WEB-INF/classes/jndi.properties
+      [war] adding entry WEB-INF/classes/log4j.properties
+      [war] adding directory WEB-INF/classes/messages/
+      [war] adding entry WEB-INF/classes/messages/messages_en.properties
+      [war] adding entry WEB-INF/classes/messages/messages_sr.properties
+      [war] adding directory WEB-INF/classes/rs/
+      [war] adding directory WEB-INF/classes/rs/ac/
+      [war] adding directory WEB-INF/classes/rs/ac/uns/
+      [war] adding directory WEB-INF/classes/rs/ac/uns/ftn/
+      [war] adding directory WEB-INF/classes/rs/ac/uns/ftn/informatika/
+      [war] adding directory WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/
+      [war] adding directory WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/
+      [war] adding directory WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/
+      [war] adding entry WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/Indexer.class
+      [war] adding entry WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/QueryBuilder.class
+      [war] adding entry WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/ResultRetriever.class
+      [war] adding entry WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/SerbianAnalyzer.class
+      [war] adding directory WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/filters/
+      [war] adding entry WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/filters/CyrilicToLatinFilter.class
+      [war] adding entry WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/filters/CyrillicLatinConverter.class
+      [war] adding directory WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/handlers/
+      [war] adding entry WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/handlers/DocumentHandler.class
+      [war] adding entry WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/handlers/PDFHandler.class
+      [war] adding directory WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/model/
+      [war] adding entry WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/model/RequiredHighlight.class
+      [war] adding entry WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/model/SearchType$Type.class
+      [war] adding entry WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/model/SearchType.class
+      [war] adding directory WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/
+      [war] adding directory WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/
+      [war] adding entry WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/AccountController.class
+      [war] adding entry WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/DownloadController.class
+      [war] adding entry WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/EbookController.class
+      [war] adding entry WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/GenreChangeController.class
+      [war] adding entry WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/GenreController.class
+      [war] adding entry WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/InitApp.class
+      [war] adding entry WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/LangChangeController.class
+      [war] adding entry WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/LanguageController.class
+      [war] adding entry WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/LoginController.class
+      [war] adding entry WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/LogoutController.class
+      [war] adding entry WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/MessageConstants.class
+      [war] adding entry WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/SearchController.class
+      [war] adding entry WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/UploadController.class
+      [war] adding entry WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/UserController.class
+      [war] adding directory WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/entity/
+      [war] adding entry WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/entity/Category.class
+      [war] adding entry WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/entity/Ebook.class
+      [war] adding entry WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/entity/File.class
+      [war] adding entry WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/entity/Language.class
+      [war] adding entry WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/entity/User.class
+      [war] adding entry WEB-INF/classes/rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/entity/UserRole.class
+      [war] adding directory WEB-INF/lib/
+      [war] adding entry WEB-INF/lib/commons-collections-3.2.1.jar
+      [war] adding entry WEB-INF/lib/commons-fileupload-1.2.1.jar
+      [war] adding entry WEB-INF/lib/commons-io-1.3.2.jar
+      [war] adding entry WEB-INF/lib/commons-lang-2.6.jar
+      [war] adding entry WEB-INF/lib/commons-logging-1.1.1.jar
+      [war] adding entry WEB-INF/lib/dom4j-1.6.1.jar
+      [war] adding entry WEB-INF/lib/fontbox-1.8.3.jar
+      [war] adding entry WEB-INF/lib/geronimo-stax-api_1.0_spec-1.0.jar
+      [war] adding entry WEB-INF/lib/jackson-annotations-2.6.0.jar
+      [war] adding entry WEB-INF/lib/jackson-core-2.6.4.jar
+      [war] adding entry WEB-INF/lib/jackson-databind-2.6.4.jar
+      [war] adding entry WEB-INF/lib/javaee-api-6.0-4-tomcat.jar
+      [war] adding entry WEB-INF/lib/jempbox-1.8.3.jar
+      [war] adding entry WEB-INF/lib/jstl-1.2.jar
+      [war] adding entry WEB-INF/lib/log4j-1.2.8.jar
+      [war] adding entry WEB-INF/lib/lucene-analyzers-common-4.0.0.jar
+      [war] adding entry WEB-INF/lib/lucene-core-4.0.0.jar
+      [war] adding entry WEB-INF/lib/lucene-highlighter-4.0.0.jar
+      [war] adding entry WEB-INF/lib/lucene-queryparser-4.0.0.jar
+      [war] adding entry WEB-INF/lib/mysql-connector-java-5.1.22-bin.jar
+      [war] adding entry WEB-INF/lib/openejb-client-4.5.0.jar
+      [war] adding entry WEB-INF/lib/openjpa-asm-shaded-2.2.0.jar
+      [war] adding entry WEB-INF/lib/pdfbox-1.8.3.jar
+      [war] adding entry WEB-INF/lib/pdfbox-lucene-1.7.1.jar
+      [war] adding entry WEB-INF/lib/poi-3.7-20101029.jar
+      [war] adding entry WEB-INF/lib/poi-ooxml-3.7-20101029.jar
+      [war] adding entry WEB-INF/lib/poi-scratchpad-3.7-20101029.jar
+      [war] adding entry WEB-INF/lib/serp-1.13.1.jar
+      [war] adding entry WEB-INF/lib/servlet-api.jar
+      [war] adding entry WEB-INF/lib/standard.jar
+      [war] adding entry WEB-INF/lib/xbean-asm-shaded-3.11.jar
+      [war] adding entry WEB-INF/lib/xmlbeans-2.3.0.jar
+      [war] No Implementation-Title set.No Implementation-Version set.No Implementation-Vendor set.
+Location: /home/alligator/Desktop/ElementBookRepository/build.xml:61: 
+war:  duration 1 second
+
+ear:
+    [mkdir] Skipping /home/alligator/Desktop/ElementBookRepository/dist because it already exists.
+      [ear] Building ear: /home/alligator/Desktop/ElementBookRepository/dist/ElementBookRepository.ear
+      [ear] adding directory META-INF/
+      [ear] adding entry META-INF/MANIFEST.MF
+      [ear] adding entry META-INF/application.xml
+      [ear] adding entry ElementBookRepository.jar
+      [ear] adding entry ElementBookRepository.war
+      [ear] No Implementation-Title set.No Implementation-Version set.No Implementation-Vendor set.
+Location: /home/alligator/Desktop/ElementBookRepository/build.xml:109: 
+ear:  duration 1 second
+
+deploy:
+     [copy] ElementBookRepository.ear added as ElementBookRepository.ear doesn't exist.
+     [copy] No sources found.
+     [copy] Copying 1 file to /home/alligator/Desktop/apache-tomee-plus-1.7.3/webapps
+     [copy] Copying /home/alligator/Desktop/ElementBookRepository/dist/ElementBookRepository.ear to /home/alligator/Desktop/apache-tomee-plus-1.7.3/webapps/ElementBookRepository.ear
+     [copy] log4j-1.2.8.jar omitted as /home/alligator/Desktop/apache-tomee-plus-1.7.3/lib/log4j-1.2.8.jar is up to date.
+     [copy] commons-collections-3.2.1.jar omitted as /home/alligator/Desktop/apache-tomee-plus-1.7.3/lib/commons-collections-3.2.1.jar is up to date.
+     [copy] commons-fileupload-1.2.1.jar omitted as /home/alligator/Desktop/apache-tomee-plus-1.7.3/lib/commons-fileupload-1.2.1.jar is up to date.
+     [copy] commons-io-1.3.2.jar omitted as /home/alligator/Desktop/apache-tomee-plus-1.7.3/lib/commons-io-1.3.2.jar is up to date.
+     [copy] commons-lang-2.6.jar omitted as /home/alligator/Desktop/apache-tomee-plus-1.7.3/lib/commons-lang-2.6.jar is up to date.
+     [copy] commons-logging-1.1.1.jar omitted as /home/alligator/Desktop/apache-tomee-plus-1.7.3/lib/commons-logging-1.1.1.jar is up to date.
+     [copy] dom4j-1.6.1.jar omitted as /home/alligator/Desktop/apache-tomee-plus-1.7.3/lib/dom4j-1.6.1.jar is up to date.
+     [copy] fontbox-1.8.3.jar omitted as /home/alligator/Desktop/apache-tomee-plus-1.7.3/lib/fontbox-1.8.3.jar is up to date.
+     [copy] geronimo-stax-api_1.0_spec-1.0.jar omitted as /home/alligator/Desktop/apache-tomee-plus-1.7.3/lib/geronimo-stax-api_1.0_spec-1.0.jar is up to date.
+     [copy] jackson-annotations-2.6.0.jar omitted as /home/alligator/Desktop/apache-tomee-plus-1.7.3/lib/jackson-annotations-2.6.0.jar is up to date.
+     [copy] jackson-core-2.6.4.jar omitted as /home/alligator/Desktop/apache-tomee-plus-1.7.3/lib/jackson-core-2.6.4.jar is up to date.
+     [copy] jackson-databind-2.6.4.jar omitted as /home/alligator/Desktop/apache-tomee-plus-1.7.3/lib/jackson-databind-2.6.4.jar is up to date.
+     [copy] javaee-api-6.0-4-tomcat.jar omitted as /home/alligator/Desktop/apache-tomee-plus-1.7.3/lib/javaee-api-6.0-4-tomcat.jar is up to date.
+     [copy] jempbox-1.8.3.jar omitted as /home/alligator/Desktop/apache-tomee-plus-1.7.3/lib/jempbox-1.8.3.jar is up to date.
+     [copy] jstl-1.2.jar omitted as /home/alligator/Desktop/apache-tomee-plus-1.7.3/lib/jstl-1.2.jar is up to date.
+     [copy] lucene-analyzers-common-4.0.0.jar omitted as /home/alligator/Desktop/apache-tomee-plus-1.7.3/lib/lucene-analyzers-common-4.0.0.jar is up to date.
+     [copy] lucene-core-4.0.0.jar omitted as /home/alligator/Desktop/apache-tomee-plus-1.7.3/lib/lucene-core-4.0.0.jar is up to date.
+     [copy] lucene-highlighter-4.0.0.jar omitted as /home/alligator/Desktop/apache-tomee-plus-1.7.3/lib/lucene-highlighter-4.0.0.jar is up to date.
+     [copy] lucene-queryparser-4.0.0.jar omitted as /home/alligator/Desktop/apache-tomee-plus-1.7.3/lib/lucene-queryparser-4.0.0.jar is up to date.
+     [copy] mysql-connector-java-5.1.22-bin.jar omitted as /home/alligator/Desktop/apache-tomee-plus-1.7.3/lib/mysql-connector-java-5.1.22-bin.jar is up to date.
+     [copy] openejb-client-4.5.0.jar omitted as /home/alligator/Desktop/apache-tomee-plus-1.7.3/lib/openejb-client-4.5.0.jar is up to date.
+     [copy] openjpa-asm-shaded-2.2.0.jar omitted as /home/alligator/Desktop/apache-tomee-plus-1.7.3/lib/openjpa-asm-shaded-2.2.0.jar is up to date.
+     [copy] pdfbox-1.8.3.jar omitted as /home/alligator/Desktop/apache-tomee-plus-1.7.3/lib/pdfbox-1.8.3.jar is up to date.
+     [copy] pdfbox-lucene-1.7.1.jar omitted as /home/alligator/Desktop/apache-tomee-plus-1.7.3/lib/pdfbox-lucene-1.7.1.jar is up to date.
+     [copy] poi-3.7-20101029.jar omitted as /home/alligator/Desktop/apache-tomee-plus-1.7.3/lib/poi-3.7-20101029.jar is up to date.
+     [copy] poi-ooxml-3.7-20101029.jar omitted as /home/alligator/Desktop/apache-tomee-plus-1.7.3/lib/poi-ooxml-3.7-20101029.jar is up to date.
+     [copy] poi-scratchpad-3.7-20101029.jar omitted as /home/alligator/Desktop/apache-tomee-plus-1.7.3/lib/poi-scratchpad-3.7-20101029.jar is up to date.
+     [copy] serp-1.13.1.jar omitted as /home/alligator/Desktop/apache-tomee-plus-1.7.3/lib/serp-1.13.1.jar is up to date.
+     [copy] servlet-api.jar omitted as /home/alligator/Desktop/apache-tomee-plus-1.7.3/lib/servlet-api.jar is up to date.
+     [copy] standard.jar omitted as /home/alligator/Desktop/apache-tomee-plus-1.7.3/lib/standard.jar is up to date.
+     [copy] xbean-asm-shaded-3.11.jar omitted as /home/alligator/Desktop/apache-tomee-plus-1.7.3/lib/xbean-asm-shaded-3.11.jar is up to date.
+     [copy] xmlbeans-2.3.0.jar omitted as /home/alligator/Desktop/apache-tomee-plus-1.7.3/lib/xmlbeans-2.3.0.jar is up to date.
+     [copy] No sources found.
+deploy:  duration 0 seconds
+
+BUILD SUCCESSFUL

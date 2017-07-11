@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+		  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+		  metadata-complete="false">
+   <display-name>ElementBookRepository</display-name>
+
+
+	<listener>
+		<listener-class>rs.ac.uns.ftn.informatika.osa.ElementBookRepository.server.controller.InitApp</listener-class>
+	</listener>
+   
+   
+	<servlet>
+	  <servlet-name>GenreController</servlet-name>
+	  <servlet-class>rs.ac.uns.ftn.informatika.osa.ElementBookRepository.server.controller.GenreController</servlet-class>
+	</servlet>
+	
+	<servlet>
+	  <servlet-name>LanguageController</servlet-name>
+	  <servlet-class>rs.ac.uns.ftn.informatika.osa.ElementBookRepository.server.controller.LanguageController</servlet-class>
+	</servlet>
+
+	
+	<servlet>
+	  <servlet-name>EbookController</servlet-name>
+	  <servlet-class>rs.ac.uns.ftn.informatika.osa.ElementBookRepository.server.controller.EbookController</servlet-class>
+	</servlet>
+	
+	<servlet>
+	  <servlet-name>UserController</servlet-name>
+	  <servlet-class>rs.ac.uns.ftn.informatika.osa.ElementBookRepository.server.controller.UserController</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>LoginController</servlet-name>
+		<servlet-class>rs.ac.uns.ftn.informatika.osa.ElementBookRepository.server.controller.LoginController</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>AccountController</servlet-name>
+		<servlet-class>rs.ac.uns.ftn.informatika.osa.ElementBookRepository.server.controller.AccountController</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>LogoutController</servlet-name>
+		<servlet-class>rs.ac.uns.ftn.informatika.osa.ElementBookRepository.server.controller.LogoutController</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>LangChangeController</servlet-name>
+		<servlet-class>rs.ac.uns.ftn.informatika.osa.ElementBookRepository.server.controller.LangChangeController</servlet-class>
+	</servlet>
+    <servlet>
+        <servlet-name>UploadController</servlet-name>
+        <servlet-class>rs.ac.uns.ftn.informatika.osa.ElementBookRepository.server.controller.UploadController
+        </servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GenreChangeController</servlet-name>
+        <servlet-class>rs.ac.uns.ftn.informatika.osa.ElementBookRepository.server.controller.GenreChangeController
+        </servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DownloadController</servlet-name>
+        <servlet-class>rs.ac.uns.ftn.informatika.osa.ElementBookRepository.server.controller.DownloadController
+        </servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SearchController</servlet-name>
+        <servlet-class>rs.ac.uns.ftn.informatika.osa.ElementBookRepository.server.controller.SearchController
+        </servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+	  <servlet-name>GenreController</servlet-name>
+	  <url-pattern>/GenreController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+	  <servlet-name>LanguageController</servlet-name>
+	  <url-pattern>/LanguageController</url-pattern>
+	</servlet-mapping>
+
+  	<servlet-mapping>
+	  <servlet-name>EbookController</servlet-name>
+	  <url-pattern>/EbookController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+	  <servlet-name>UserController</servlet-name>
+	  <url-pattern>/UserController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+	  <servlet-name>LoginController</servlet-name>
+	  <url-pattern>/LoginController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+	  <servlet-name>AccountController</servlet-name>
+	  <url-pattern>/AccountController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LogoutController</servlet-name>
+		<url-pattern>/LogoutController/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LangChangeController</servlet-name>
+		<url-pattern>/LangChangeController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UploadController</servlet-name>
+		<url-pattern>/UploadController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GenreChangeController</servlet-name>
+		<url-pattern>/Genre</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DownloadController</servlet-name>
+		<url-pattern>/Download</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SearchController</servlet-name>
+		<url-pattern>/Search</url-pattern>
+	</servlet-mapping>
+
+  
+  	<error-page>
+  		<exception-type>
+  			java.lang.Throwable
+  		</exception-type>
+  		<location>/error.jsp</location>
+  	</error-page>
+	<error-page>
+	    <error-code>404</error-code>
+	    <location>/error-page.html</location>
+	</error-page> 
+ 
+
+</web-app>

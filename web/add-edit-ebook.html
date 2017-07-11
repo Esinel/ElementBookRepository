@@ -1,0 +1,26 @@
+<div id="add-new-movie-window" class="add-new-modal-window" style="display:none">
+    <h2 style="text-align:center;padding-top:20px;padding-bottom:20px;">Add new ebook</h2>
+    <form id="add-new-movie-form" action="EbookController" method="post" enctype="multipart/form-data" novalidate>
+        <label>Upload pdf: </label>
+        <input type="file" name="pdf" accept="application/pdf" id="ebookFile">
+        <input type="hidden" name="purpose" id="formMPurpose" />
+        <input type="hidden" name="id" id="ebookID">
+        <input type="text" name="title" id="ebookTitle"  placeholder="Title" required />
+        <input type="text" name="author" id="ebookAuthor" placeholder="Author" required />
+        <input type="number" name="publicationYear" id="ebookYear" placeholder="Publication year" required />
+        <input type="text" name="keywords" id="ebookKeywords" placeholder="keywords" required />
+        
+        <div style="margin-bottom:10px;">
+            <label>Genre:</label>
+            <select name="genre" id="select-genre" form="add-new-movie-form" required></select>
+        </div>
+        <div style="margin-bottom:10px;">
+            <label>Language:</label>
+            <select name="language" id="select-language" form="add-new-movie-form" required></select>
+        </div>
+        <div>
+            <input type="button" value="Odustani" class="nero-btn add-new-window-close">
+            <input type="submit" value="Potvrdi" class="nero-btn">
+        </div>
+    </form>
+</div>

@@ -1,0 +1,151 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #1E3138;
+    color: #929B9F;
+}
+
+#mainContainer{
+    position: absolute;
+    width: 500px;
+    height: 750px;
+    z-index: 15;
+    top: 50%;
+    left: 50%;
+    margin: -375px 0 0 -250px;
+    -webkit-box-shadow: 0px 0px 60px 5px rgba(52,179,160,0.61);
+    -moz-box-shadow: 0px 0px 60px 5px rgba(52,179,160,0.61);
+    box-shadow: 0px 0px 60px 5px rgba(52,179,160,0.61);
+}
+
+#userAccIcon{
+    width: 120px;
+    height: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+}
+
+#userPassForm{
+    width:300px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#userPassForm input{
+    margin-bottom: 5px;
+}
+
+#userPersonalForm{
+    width:300px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#userPersonalForm input{
+    margin-bottom: 5px;
+}
+
+.txtfield { 
+  display: inline-block;
+  width: 60%;
+  padding: 6px 5px;
+  margin-bottom: 15px;
+  color: #7988a3;
+  font-size: 1.1em;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8);
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#edf3f9), to(#fff));
+  background-image: -webkit-linear-gradient(top, #edf3f9, #fff);
+  background-image: -moz-linear-gradient(top, #edf3f9, #fff);
+  background-image: -ms-linear-gradient(top, #edf3f9, #fff);
+  background-image: -o-linear-gradient(top, #edf3f9, #fff);
+  background-image: linear-gradient(top, #edf3f9, #fff);
+  border: 1px solid;
+  border-color: #abbce8 #c3cae0 #b9c8ef;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.4);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.4);
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+  text-align:right;
+}
+
+.txtfield:focus {
+  outline: none;
+  color: #525864;
+  border-color: #84c0ee;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), 0 0 7px #96c7ec;
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), 0 0 7px #96c7ec;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), 0 0 7px #96c7ec;
+}   
+
+
+/** custom login button **/
+.flatbtn-blu { 
+    margin-top: 5px;
+    margin-left: 90px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  color: #edf4f9;
+  text-decoration: none;
+  background-color: #4f94cf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  font-size: 1em;
+  font-weight: bold;
+  padding: 5px 10px 5px 10px;
+  line-height: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.flatbtn-blu:hover {
+  color: #fff;
+  background-color: #FF5555;
+}
+.flatbtn-blu:active {
+  -webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow:inset 0 1px 5px rgba(0, 0, 0, 0.1);
+  box-shadow:inset 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+#messagerBox{
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    top: -20px;
+    background-color: #00D180;
+    text-align: center;
+    font-weight: bold;
+    color: #E7E7E7;
+}

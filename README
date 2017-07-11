@@ -1,0 +1,47 @@
+Fakultet tehniÄ�kih nauka / Katedra za informatiku
+Osnove softverskih arhitektura / 2016.
+=================================
+
+1. Lokacija primera
+-------------------
+rs.ac.uns.ftn.informatika.osa.vezbe07.client
+rs.ac.uns.ftn.informatika.osa.vezbe07.server.service
+rs.ac.uns.ftn.informatika.osa.vezbe07.server.entity
+rs.ac.uns.ftn.informatika.osa.vezbe07.server.session
+messages
+web
+WEB-INF
+META-INF
+
+2. Opis primera
+---------------
+Primer kompletne web aplikacije koja se sastoji iz sledecih delova:
+- service predstavlja sloj u web aplikaciji sa MVC arhitekturom, 
+  pristupaju session bean-ovima
+- JSP stranice koje predstavljaju prikaze (view) u MVC modelu
+- entity klase kao model podataka aplikacije (anotirane perzistentne klase) 
+- session bean-ovi za realizaciju business logike
+- konfiguracioni fajlovi za razlicite delove sistema
+
+3. Sadrzaj primera
+------------------
+jsp/*         			- JSP stranice kao view iz MVC modela
+*.service.*    			- REST servis sloj iz MVC modela
+*.entity.*      		- anotirane perzistentne klase - model podataka
+*.session.*     		- klasa koje realizuju business logiku
+*.util.*        		- Klase koje sluze kao servisi klasama iz drugih paketa (usluzne klase)
+*.client.*				- pozivanje metode session bean-a
+messages.*				- lokalizovane poruke koje su vidljive u jsp stranama
+WEB-INF/web.xml    		- konfiguracioni fajl za web aplikaciju
+META-INF/persistence.xml - konfiguracija entity managera
+META-INF/application.xml - konfiguracija cele aplikacije
+log4j.properties		- konfiguracija log4j
+jndi.properties			- konfiguracija JNDI klijenta
+
+4. Pokretanje primera
+---------------------
+[] ant deploy
+[] ant prepare-database
+http://localhost:8080/Vezbe07/
+
+(Napomena: neophodno je izmeniti podatke u build.properites, pokrenuti MySQL server unutar koga je kreirana odgovarajuca baza podataka i pokrenuti Tomee server)

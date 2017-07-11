@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0" 	xmlns="http://java.sun.com/xml/ns/persistence" 
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+							xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+  
+  <persistence-unit name="ElementBookRepository" transaction-type="JTA">
+    <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
+    <jta-data-source>MySQLDatabase</jta-data-source>
+    <class>rs.ac.uns.ftn.informatika.osa.ElementBookRepository.server.entity.Ebook</class>
+    
+    
+    <properties>
+	  <property name="openjpa.ConnectionURL" value="jdbc:mysql://localhost:3306/ElementBookRepository"/>
+	  <property name="openjpa.ConnectionDriverName" value="com.mysql.jdbc.Driver"/>
+	  <property name="openjpa.ConnectionUserName" value="root"/>
+	  <property name="openjpa.ConnectionPassword" value="root"/>
+	  <property name="openjpa.DynamicEnhancementAgent" value="true"/>
+	  <property name="openjpa.RuntimeUnenhancedClasses" value="supported"/>
+	  <property name="openjpa.Log" value="SQL=TRACE"/>
+	  <property name="openjpa.ConnectionFactoryProperties" value="PrettyPrint=true, PrettyPrintLineLength=72, PrintParameters=true, MaxActive=10, MaxIdle=5, MinIdle=2, MaxWait=60000"/>
+	  <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
+		<property name="javax.persistence.jdbc.url" value="jdbc:h2:target/h2-3" />
+		<property name="javax.persistence.jdbc.user" value="sa" />
+		<property name="openjpa.RuntimeUnenhancedClasses" value="supported" />
+    
+      <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)" />
+      <property name="openjpa.jdbc.DBDictionary" value="mysql" />
+      <property name="openjpa.Log" value="DefaultLevel=WARN, Runtime=TRACE, Tool=INFO" />
+		<property name="hibernate.transaction.factory_class" value="org.hibernate.ejb.transaction.JoinableCMTTransactionFactory"/>
+    </properties>
+  </persistence-unit>
+  
+</persistence>

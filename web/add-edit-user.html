@@ -1,0 +1,29 @@
+<div id="add-new-user-window" class="add-new-modal-window" style="display:none">
+    <h2 style="text-align:center;padding-top:20px;padding-bottom:20px;">Add new user</h2>
+    <form id="add-new-user-form">
+        <input type="text" name="purpose" id="formUPurpose" style="display:none;">
+        <input type="text" name="id" id="userID" style="display:none;">
+        <input type="text" name="username" id="usrUsername" placeholder="Username" required>
+        <input type="text" name="password" id="usrPassword" placeholder="Password" required>
+        <input type="text" name="firstname" id="usrFirstname"  placeholder="Firstname" required>
+        <input type="text" name="lastname" id="usrLastname"  placeholder="Lastname" required>
+
+        <div style="margin-bottom:10px;">
+            <label>Role:</label>
+            <select name="role" id="select-role" form="add-new-user-form">
+                <option value="1">ADMIN</option>
+                <option value="2">SUBSCRIBER</option>
+            </select>
+        </div>
+        <div style="margin-bottom:10px;display:none;" id="madjija">
+            <label>Genre:</label>
+            <select name="genre" id="select-new-user-genre" form="add-new-user-form">
+                
+            </select>
+        </div>
+        <div>
+            <input type="button" value="Odustani" class="nero-btn add-new-window-close">
+            <input type="submit" value="Potvrdi" class="nero-btn">
+        </div>
+    </form>
+</div>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<project name="ElementBookRepository" basedir=".">
+	<record name="./output/build.log" loglevel="verbose" action="start"/>
+
+	<property file="build.properties" />
+
+	<property name="build" value="${basedir}/build" />
+	<property name="dist" value="${basedir}/dist" />
+	<property name="docs" value="${basedir}/docs" />
+	<property name="lib" value="${basedir}/lib" />
+	<property name="src" value="${basedir}/src" />
+	<property name="web" value="${basedir}/web" />
+
+	<path id="classpath">
+	    <fileset dir="${lib}" includes="*.jar"/>
+	</path>
+	
+	<!-- Delete all built files -->
+	<target name="clean">
+		<delete dir="${build}" />
+		<delete dir="${dist}" />
+		<delete file="${tomee.dir}/webapps/${earname}"/>
+		<delete dir="${tomee.dir}/webapps/ElementBookRepository"/>
+		<delete file="${tomee.dir}/temp/*"/>
+		<delete file="${tomee.dir}/work/*"/>
+	</target>
+	
+	<target name="check-tomee" unless="tomee.dir">
+		<fail>
+			Property "tomee.dir" is not set. Please use the file
+			"build.properties" in this directory ${basedir} to
+			set this property. It must point to the directory which
+			contains the following directory: "bin", "conf", "webapps"
+			etc.
+		</fail>
+	</target>
+	
+	<target name="check-environment">
+		<antcall target="check-tomee" />
+	</target>
+
+	<target name="init" depends="check-environment">
+		<mkdir dir="${build}"/>
+		<mkdir dir="${dist}"/>
+		<echo message="java.home = ${java.home}" />
+		<echo message="tomee.dir = ${tomee.dir}" />
+	</target>
+
+	<!-- Compile everything -->
+	<target name="compile" depends="init">
+	    <javac srcdir="${src}" destdir="${build}" classpathref="classpath" debug="true" />
+		<copy  todir="${build}">
+			<fileset dir="${src}" includes="**/*.properties"/>
+			<fileset dir="${src}" includes="**/*.xml"/>
+		</copy>
+	</target>
+	
+	<!-- War -->
+	<target name="war" depends="compile">
+		<war destfile="${dist}/${warname}" webxml="${web}/WEB-INF/web.xml">
+			<zipfileset dir="${web}">
+	        <include name="*.html"/>
+	      	<include name="*.jsp"/>
+	      	<include name="*.css"/>
+	      	<include name="*.js"/>
+	      	<include name="images/*"/>
+	      	<include name="images/*/*"/>
+	      	<include name="css/*"/>
+	      	<include name="js/*"/>
+	      </zipfileset>
+	      <classes dir="build">
+	        <include name="rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/controller/*.class"/>
+	      	<include name="rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/service/*.class"/>
+	        <include name="rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/entity/*.class"/>
+		  	<include name="rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/*.class"/>
+		  	<include name="rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/filters/*.class"/>
+		  	<include name="rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/handlers/*.class"/>
+		  	<include name="rs/ac/uns/ftn/informatika/osa/ElementBookRepository/lucene/model/*.class"/>
+
+		  	<include name="messages/*.properties"/>
+	      	<include name="log4j.properties"/>
+		  	<include name="app.properties"/>
+	  		<include name="jndi.properties"/>
+	      </classes>
+		<lib dir="lib">
+			<include name="*.jar" />
+		</lib>
+	    </war>
+	</target>
+
+	<!-- Jar -->	
+	<target name="jar" depends="compile">
+		<mkdir dir="${dist}"/>
+		<jar destfile="${dist}/${jarname}">
+			<zipfileset dir="${build}/META-INF" prefix="META-INF">
+				<include name="persistence.xml"/>
+			</zipfileset>			
+			<zipfileset dir="${build}">
+				<include name="rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/session/*.class"/>
+				<include name="rs/ac/uns/ftn/informatika/osa/ElementBookRepository/server/entity/*.class"/>
+			</zipfileset>					
+		</jar>
+	</target>
+	
+	<!-- Ear -->
+	<target name="ear" depends="jar,war">
+		<mkdir dir="${dist}"/>
+		<ear destfile="${dist}/${earname}" appxml="${build}/META-INF/application.xml">
+			<zipfileset dir="${dist}">
+				<include name="${jarname}"/>
+				<include name="${warname}"/>
+			</zipfileset>
+		</ear>
+	</target>
+
+	<!-- Deploy  -->
+	<target name="deploy" depends="ear">
+		<copy todir="${tomee.dir}/webapps">
+			<fileset dir="${dist}" includes="${earname}" />
+		</copy>	
+		<copy todir="${tomee.dir}/lib">
+			<fileset dir="${lib}" includes="log4j-1.2.8.jar" />
+			<fileset dir="${lib}" includes="*.jar" />
+		</copy>
+	</target>
+	
+	<!-- Setup -->
+	<target name="prepare-database">
+	    <echo message="Inserting default user into database."/>
+		<java classname="rs.ac.uns.ftn.informatika.osa.ElementBookRepository.client.InitClient" fork="true">
+			<classpath>
+				<pathelement path="${build}" />
+				<fileset dir="${lib}">
+					<include name="*.jar"/>
+				</fileset>
+			</classpath>
+		</java>
+	</target>
+
+</project>

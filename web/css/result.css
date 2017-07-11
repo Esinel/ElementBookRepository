@@ -1,0 +1,36 @@
+*{
+    font-family: 'Quicksand', sans-serif;
+}
+
+body{
+    background-color: #F2F1F0;
+}
+
+h1{
+    text-align: center;
+}
+
+table{
+    width: 100%;
+    margin: 0 auto;
+    border: solid;
+    font-size: 3em;
+    color: #2e3a54;
+}
+
+table a{
+    text-decoration: none;
+    color: #2e3a54;
+}
+
+td{
+    border-bottom: 1px solid;
+}
+
+td:hover > a {
+    color: #2E7AD1;
+}
+
+tr:nth-child(even){
+    background-color: #DBD9D6;
+}

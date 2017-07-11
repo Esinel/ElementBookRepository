@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="/home/alligator/workspaces/OSA/ProjekatOSA_X/lib/xbean-asm-shaded-3.11.jar"/>
+	<classpathentry kind="lib" path="/home/alligator/workspaces/OSA/ProjekatOSA_X/lib/standard.jar"/>
+	<classpathentry kind="lib" path="/home/alligator/workspaces/OSA/ProjekatOSA_X/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="/home/alligator/workspaces/OSA/ProjekatOSA_X/lib/serp-1.13.1.jar"/>
+	<classpathentry kind="lib" path="/home/alligator/workspaces/OSA/ProjekatOSA_X/lib/openjpa-asm-shaded-2.2.0.jar"/>
+	<classpathentry kind="lib" path="/home/alligator/workspaces/OSA/ProjekatOSA_X/lib/openejb-client-4.5.0.jar"/>
+	<classpathentry kind="lib" path="/home/alligator/workspaces/OSA/ProjekatOSA_X/lib/mysql-connector-java-5.1.22-bin.jar"/>
+	<classpathentry kind="lib" path="/home/alligator/workspaces/OSA/ProjekatOSA_X/lib/log4j-1.2.8.jar"/>
+	<classpathentry kind="lib" path="/home/alligator/workspaces/OSA/ProjekatOSA_X/lib/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="/home/alligator/workspaces/OSA/ProjekatOSA_X/lib/javaee-api-6.0-4-tomcat.jar"/>
+	<classpathentry kind="lib" path="/home/alligator/workspaces/OSA/ProjekatOSA_X/lib/jackson-databind-2.6.4.jar"/>
+	<classpathentry kind="lib" path="/home/alligator/workspaces/OSA/ProjekatOSA_X/lib/jackson-core-2.6.4.jar"/>
+	<classpathentry kind="lib" path="/home/alligator/workspaces/OSA/ProjekatOSA_X/lib/jackson-annotations-2.6.0.jar"/>
+	<classpathentry kind="lib" path="/home/alligator/workspaces/OSA/ProjekatOSA_X/lib/commons-lang-2.6.jar"/>
+	<classpathentry kind="lib" path="/home/alligator/workspaces/OSA/ProjekatOSA_X/lib/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

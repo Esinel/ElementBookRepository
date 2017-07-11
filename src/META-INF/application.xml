@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+    <display-name>ElementBookRepository</display-name>
+    
+    <module>
+        <web>
+            <web-uri>ElementBookRepository.war</web-uri>
+            <context-root>/ElementBookRepository</context-root>
+        </web>
+    </module>
+
+    <module>
+        <ejb>ElementBookRepository.jar</ejb>
+    </module>
+</application>
